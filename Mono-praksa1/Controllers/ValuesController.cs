@@ -11,6 +11,7 @@ namespace Mono_praksa1.Controllers
     {
         public static class CharacterList
         {
+
             static List<Character> characters;
             static CharacterList()
             {
