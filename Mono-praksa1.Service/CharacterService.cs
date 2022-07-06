@@ -1,5 +1,7 @@
-﻿using Mono_praksa1.Model.Models;
+﻿using Mono_praksa1.Common;
+using Mono_praksa1.Model.Models;
 using Mono_praksa1.Repository;
+using Mono_praksa1.RepositoryCommon;
 using Mono_Praksa1.Service.Common;
 using System;
 using System.Collections.Generic;
@@ -13,29 +15,38 @@ namespace Mono_praksa1.Service
 {
     public class CharacterService:ICharactersService
     {
-        public CharacterService() { }
-        public Task<List<Character>> GetCharacters()
+        protected ICharacterRepository repository;
+        public CharacterService(ICharacterRepository repository) {
+            this.repository = repository;
+        }
+        
+        public async Task<List<Character>> GetCharacters()
         {
-            CharacterRepository repository = new CharacterRepository();
-            return repository.GetAllAsync();
+            
+            return await  repository.GetAllAsync();
         }
 
-        public Task PostCharacter(Character character)
+        public async Task<Character> PostCharacter(Character character)
         {
-            CharacterRepository repository = new CharacterRepository();
-            return repository.PostCharacterAsync(character);
+            //CharacterRepository repository = new CharacterRepository();
+            return await repository.PostCharacterAsync(character);
         }
 
-        public Task PutCharacter(int id, Character character)
+        public async Task<Character> PutCharacter(int id, Character character)
         {
-            CharacterRepository repository = new CharacterRepository();
-            return repository.UpdateCharacterAsync(id, character);
+            //CharacterRepository repository = new CharacterRepository();
+            return  await repository.UpdateCharacterAsync(id, character);
         }
 
-        public Task DeleteCharacter(int id)
+        public async Task<bool> DeleteCharacter(int id)
         {
-            CharacterRepository repository = new CharacterRepository();
-            return repository.DeleteCharacterAsync(id);
+            //CharacterRepository repository = new CharacterRepository();
+            return  await repository.DeleteCharacterAsync(id);
+        }
+
+        public async Task<List<Character>> GetCharactersFiltered(Paging paging, Sorting sorting, FilteredCharacter filteredCharacter)
+        {
+            return await repository.GetAllAsyncFiltered(paging, sorting, filteredCharacter);
         }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mono_praksa1.RepositoryCommon
+namespace Mono_praksa1.Model.Models
 {
-    public class Class1
+    class FilteredFaction
     {
     }
 }

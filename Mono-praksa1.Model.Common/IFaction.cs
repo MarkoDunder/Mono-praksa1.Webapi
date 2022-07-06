@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mono_praksa1.Model.Common
 {
-    public class Class1
+    public interface  IFaction
     {
     }
 }

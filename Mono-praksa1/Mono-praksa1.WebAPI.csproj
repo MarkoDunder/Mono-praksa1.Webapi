@@ -45,10 +45,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=6.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.6.0.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=6.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.6.1.0\lib\net472\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -249,9 +277,29 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mono-praksa1.Common\Mono-praksa1.Common.csproj">
+      <Project>{B8F32191-6CBA-4D20-B929-689CFB882E18}</Project>
+      <Name>Mono-praksa1.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono-praksa1.Model.Common\Mono-praksa1.Model.Common.csproj">
+      <Project>{1B13DE78-A8E7-450D-A8D9-2C9BF57152D1}</Project>
+      <Name>Mono-praksa1.Model.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mono-praksa1.Model\Mono-praksa1.Model.csproj">
       <Project>{C6733E4F-D070-4CB2-BE0C-30C067965882}</Project>
       <Name>Mono-praksa1.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono-praksa1.RepositoryCommon\Mono-praksa1.RepositoryCommon.csproj">
+      <Project>{25BE1B16-D86D-45EB-9547-095A43FDC7B0}</Project>
+      <Name>Mono-praksa1.RepositoryCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono-praksa1.Repository\Mono-praksa1.Repository.csproj">
+      <Project>{0EDE88EE-478E-4E84-96C7-E819E3A1ED96}</Project>
+      <Name>Mono-praksa1.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mono-Praksa1.Service.Common\Mono-Praksa1.Service.Common.csproj">
+      <Project>{3099BB20-882E-4532-A2D4-9CC8059BA1C9}</Project>
+      <Name>Mono-Praksa1.Service.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mono-praksa1.Service\Mono-praksa1.Service.csproj">
       <Project>{21505387-430E-459F-8F51-76CC011B86DD}</Project>

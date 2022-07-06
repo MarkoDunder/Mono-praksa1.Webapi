@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mono_praksa1.Common
+namespace Mono_praksa1.Service
 {
-    public class Class1
+    public class FactionService
     {
     }
 }
